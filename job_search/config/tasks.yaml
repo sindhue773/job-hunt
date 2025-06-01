@@ -1,0 +1,41 @@
+job_search_task:
+  description: >
+    Search for job opportunities matching {job_title} in {location}
+    Consider experience level: {experience_level}
+    Focus on companies in {industry}
+  expected_output: >
+    A list of relevant job opportunities with company names, job titles, and application links.
+  agent: job_search_agent
+
+resume_optimization_task:
+  description: >
+    Optimize resume for {job_title} positions
+    Highlight relevant skills: {skills}
+    Target industry: {industry}
+  expected_output: >
+    Specific recommendations for resume improvements and keywords to include.
+  agent: resume_optimization_agent
+
+interview_prep_task:
+  description: >
+    Prepare interview questions and answers for {job_title} positions
+    Focus on both technical and behavioral aspects
+  expected_output: >
+    List of common interview questions and recommended answer approaches.
+  agent: interview_prep_agent
+
+market_research_task:
+  description: >
+    Research salary ranges and company information for {job_title} in {location}
+    Consider experience level: {experience_level}
+  expected_output: >
+    Salary ranges, company reviews, and industry insights.
+  agent: market_research_agent
+
+application_tracking_task:
+  description: >
+    Track applications and follow-up status
+    Organize application materials and deadlines
+  expected_output: >
+    Status report of all applications and recommended follow-up actions.
+  agent: application_tracker_agent

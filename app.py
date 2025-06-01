@@ -2,6 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from main import run
+import os 
 
 class Item(BaseModel):
     job_title: str

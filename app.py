@@ -2,7 +2,7 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from main import run
-import os 
+import os
 import uvicorn
 
 class Item(BaseModel):
@@ -11,7 +11,7 @@ class Item(BaseModel):
     experience_level: str
     industry: str
     skills: str
-    
+
 app = FastAPI()
 
 app.add_middleware(
@@ -38,11 +38,11 @@ def create_item(item: Item):
         }
     except Exception as e:
         return {"error": str(e)}
-    
+
 @app.get("/health")
 def health_check():
     return {"status": "ok"}
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 8000))  # ✅ FIXED: os now imported
-    uvicorn.run("app:app", host="0.0.0.0", port=port, reload=True)
 
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run("app:app", host="0.0.0.0", port=port)  # 🔥 removed reload=True

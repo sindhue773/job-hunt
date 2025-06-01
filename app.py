@@ -3,6 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 from main import run
 import os 
+import uvicorn
 
 class Item(BaseModel):
     job_title: str
